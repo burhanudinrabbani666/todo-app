@@ -14,9 +14,9 @@ from fastapi import (
 from fastapi.templating import Jinja2Templates
 from sqlalchemy.orm import Session
 
-from ..database import Sessionlocal
-from ..models import Todos
-from .auth import get_current_user
+from database import Sessionlocal
+from models import Todos
+from routers.auth import get_current_user
 
 router = APIRouter(prefix="/todos", tags=["Todos"])
 
@@ -203,7 +203,7 @@ PAGES
 ---------------------------------------------------------------------
 """
 
-templates = Jinja2Templates(directory="TodoApp/templates")
+templates = Jinja2Templates(directory="./templates")
 
 
 @router.get("/todo/page/")

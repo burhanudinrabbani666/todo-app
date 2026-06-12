@@ -5,10 +5,10 @@ from fastapi.testclient import TestClient
 
 import pytest
 
-from ..database import Base
-from ..main import app
-from ..models import Todos, Users
-from ..routers.auth import bcrypt_context
+from database import Base
+from main import app
+from models import Todos, Users
+from routers.auth import bcrypt_context
 
 SQLALCHEMY_DATABASE_URL = "sqlite:///./testdb.db"
 

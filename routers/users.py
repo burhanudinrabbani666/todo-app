@@ -11,9 +11,9 @@ from fastapi import (
 )
 from sqlalchemy.orm import Session
 
-from ..database import Sessionlocal
-from ..models import Users
-from .auth import get_current_user
+from database import Sessionlocal
+from models import Users
+from routers.auth import get_current_user
 
 router = APIRouter(prefix="/users", tags=["Users"])
 bcrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")

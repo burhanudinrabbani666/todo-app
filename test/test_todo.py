@@ -4,10 +4,10 @@ from fastapi import status
 
 
 from .utils import *
-from ..routers.todos import get_db
-from ..routers.auth import get_current_user
-from ..models import Todos
-from ..main import app
+from routers.todos import get_db
+from routers.auth import get_current_user
+from models import Todos
+from main import app
 
 app.dependency_overrides[get_db] = override_get_db
 app.dependency_overrides[get_current_user] = override_current_user
